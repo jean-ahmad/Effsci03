@@ -1,0 +1,225 @@
+<!--<!DOCTYPE html>-->
+
+<html lang="fr">
+
+  <head>
+    <title>Robot Moway</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" title="Design" href="design.css" />
+  </head>
+
+  <body>
+
+    <div class="contenu">
+      
+      <!--             Titre                -->
+      <div class="gros_titre">
+	<h1>Robot Moway</h1>
+	<img style="max-width: 26vw;" src="images/moway.png" alt="">
+	
+	<!--             Navigation                -->
+	<div class="navigation">
+	  <a style="width: 13vw; height: 4vw;border-right: 0.05vw solid #000000;" href="moway_1.html">
+	    Capteurs et actionneurs
+	  </a>
+	  <a style="width: 13vw; height: 4vw;border-right: 0.05vw solid #000000" class="lien_actif" href="moway_2.html">
+	    Programmation
+	  </a>
+	  <a style="width: 13vw; height: 4vw;" href="moway_3.html">
+	    Caméra
+	  </a>
+	</div>
+      </div>
+      
+      <!--             Questions               -->
+      <div class="justifie">
+	
+	<h2>Le logiciel MowayWorld</h2>
+
+	<p>Le logiciel MowayWorld permet de créer des <i>algorigrammes</i> pour programmer différentes tâches que le robot
+	  executera de manière autonomme. Différents blocs représentent les capteurs et les actionneurs du robot, et
+	  se raccordent entre eux aux moyens de flèches afin de créer le programme désiré.</p>
+
+	<div class="image_centree"><img style="max-width: 47.1vw;" src="images/moway_world.jpg" alt=""><br/><br/> 
+	  Interface du logiciel MowayWorld.</div>
+
+	<h3>Barre d'outils</h3>
+
+	<p>Avec la barre d'outils, il est possible de gérer le projet, d'éditer l'algorigramme, de créer des variables, de
+	  vérifier l'algorigramme, de compiler et transférer le proramme dans le robot, et d'accéder à beaucoup d'autres
+	  fonctionnalités.</p>
+
+	<div class="image_centree"><img style="max-width: 59.2vw;" src="images/mowayworld_barre_outils.jpg" alt=""><br/><br/> 
+	  Barre d'outils.</div>
+
+	<h3>Fenêtre d'édition des algorigrammes</h3>
+
+	<p>La fenêtre d'édition des algorigrammes est l'endroit où les blocs sont disposés et connectés afin de créer un programme.
+	  A la création d'un nouveau projet, la fenêtre contient seulement le point de départ de l'algorigramme.</p>
+
+	<div class="image_centree"><img style="max-width: 33.5vw;" src="images/mowayworld_edition_algo.jpg" alt=""><br/><br/> 
+	  Fenêtre d'édition d'algorigrammes.</div>
+
+	<h3>Boite à Outils</h3>
+
+	<p>Dans la partie gauche de l'interface de MowayWorld on trouve la boite à outils. Elle comporte les blocs
+	  permettant de contrôler le robot pour le déplacer, vérifier l'état des capteurs, communiquer, etc. Les blocs sont
+	  groupés par types de fonction (Actions, Capteurs, Données, Contrôl de l'algorigramme, Modules d'extension).</p>
+	
+	<div class="image_centree"><img style="max-width: 32.5vw;" src="images/mowayworld_outils.jpg" alt=""><br/><br/> 
+	  Boite à outils.</div>
+	
+	<h2>Consignes d'utilisation du robot</h2>
+	
+	<p>L'utilisation du robot doit suivre les étapes suivantes:</p>
+	<ul>
+	  <li>Ouverture du logiciel MowayWorld, et création du programme dans la fenêtre d'édition des algorigrammes.</li>
+	  <li style="margin-top: 2vw;">Mise à l'arrêt du robot avec l'interrupteur marche/arrêt, situé en dessous du robot,
+	    en position OFF, et branchement du robot Moway au PC avec le cable USB. Le message "Connected", en bas à gauche
+	    dans l'interface de MowayWorld, indique que le robot est correctement connecté.<br/><br/>
+
+	    <div class="image_centree"><img style="max-width: 13.9vw;" src="images/etat_moway.jpg" alt=""><br/><br/>
+	      Message "Connected" et état de la batterie.</div>
+	  </li>
+	  <li style="margin-top: 2vw;">Compilation et transfert du programme dans le robot en cliquant sur le bouton
+	    "Program mOway" dans la barre d'outil. Si l'algorigramme est juste et si le transfert réussit, un message
+	    confirmant le succès des opérations s'affiche.<br/><br/>
+
+	    <div class="image_centree"><img style="max-width: 4vw;" src="images/bouton_programmation.jpg" alt=""><br/><br/>
+	      Bouton "Program mOway".</div>
+
+	    <p><br/></p>
+	    
+	    <div class="image_centree"><img style="max-width: 19.3vw;" src="images/robot_programmed.jpg" alt=""><br/><br/>
+	      Confirmation des opérations de compilation et de transfert.</div>
+	  </li>
+	  <li style="margin-top: 2vw;">Débranchement du robot et mise en marche, avec l'interrupteur marche/arrêt en position ON,
+	    pour tester le programme.</li>
+	  <li style="margin-top: 2vw;">Branchement du robot, pendant qu'il n'est pas utilisé, pour charger la batterie.</li>
+	</ul>
+
+	<h2>Programmation du robot</h2>
+
+	<p>Créez l'algorigramme ci-dessous en glissant-déposant, depuis la boite à outils, des blocs "Lights" et "Pause",
+	  en utilisant les informations de configuration des boites de dialogue ci-dessous, et en raccordant
+	  les blocs entre eux.</p>
+
+	<div class="image_centree"><img style="max-width: 9.9vw;" src="images/premier_programme.jpg" alt=""><br/><br/>
+	  Premier Algorigramme.</div>
+
+	<p><br/></p>
+
+	<div class="image_centree"><img style="max-width: 27.2vw;" src="images/algo1_config1.jpg" alt=""><br/><br/>
+	  Configuration du premier bloc "Lights".</div>
+
+	<p><br/></p>
+
+	<div class="image_centree"><img style="max-width: 28.8vw;" src="images/algo1_config2.jpg" alt=""><br/><br/> 
+	  Configuration du deuxième bloc "Lights".</div>
+
+	<p><br/></p>
+
+	<div class="image_centree"><img style="max-width: 23vw;" src="images/algo1_config3.jpg" alt=""><br/><br/> 
+	  Configuration des blocs "Pause".</div>
+
+	<p><b>Testez</b> le programme avec le robot et <b>expliquez</b> son fonctionnement:</p>
+
+	<textarea id="" onFocus="" onChange="" cols="100" maxlength="600" rows="10"
+		      wrap="hard" placeholder="Ecrivez votre réponse ici."></textarea>
+	
+
+	<div class="double_2080">
+	  <div class="colonne_gauche">
+	    <img style="max-width: 31.9vw;" src="images/problemes.jpg" alt=""> 
+	  </div>
+	  <div class="colonne_droite"><h3>Problèmes de programmation</h3></div>
+	</div>
+
+
+	<h4>Problème 1:</h4>
+	
+	<p>Allumer successivement les DEL du robot avec un intervalle de temps de 1 seconde entre chaque
+	  allumage, et répéter cette opération indéfiniment.</p>
+
+	<h4>Problème 2:</h4>
+	
+	<p>Allumer la DEL verte lorsque le robot est posé sur un sol (de teinte claire) et la DEL rouge
+	  lorsqu’il quitte le sol.</p>
+
+	<h4>Problème 3:</h4>
+	
+	<p>A la mise sous tension, 3 secondes après avoir a été posé sur le sol, le robot doit se
+	  déplacer en marche avant à vitesse maximum sur 20cm, il doit aussi allumer la DEL verte
+	  lors de la marche avant et la DEL rouge au bout des 20cm.</p>
+
+	<h4>Problème 4:</h4>
+	
+	<p>A la mise sous tension, une fois posé au sol et une pause de 5s, le robot doit faire 8
+	  quarts de tour sur son centre à gauche suivie de 8 quarts de tour à droite avec une
+	  vitesse de 100%, puis il recommence au bout de 5s en diminuant sa vitesse de 10%,
+	  jusqu'à une vitesse nulle. Un seul cycle de rotations doit être programmer avec une variable
+	  pour paramétrer la vitesse. La variable doit être décrémenter pour diminuer la vitesse.</p>
+
+	<h4>Problème 5:</h4>
+	
+	<p>Le robot doit faire successivement les trois rondes ci-dessous. A la mise sous tension et entre chaque
+	  ronde, il doit faire une pause de 3s et attendre une consigne sonore (ex : clappement des mains).
+	  Les lignes droites doivent être parcourues sans à coups. Chacune des trois rondes doit être programmer dans
+	  une fonction différente.</p>
+
+	<div class="image_centree"><img style="max-width: 42.5vw;" src="images/rondes.jpg" alt=""></div>
+
+	<h4>Problème 6:</h4>
+	
+	<p>A la mise sous tension, le robot doit avancer tout droit, tout en vérifiant la présence d’obstacle. A
+	  chaque fois qu’il détecte un obstacle, le robot doit faire 1/4 de tour sur la droite ou la gauche afin
+	  d’éviter l’obstacle.</p>
+
+	
+	<div class="double_2080">
+	  <div class="colonne_gauche">
+	    <img style="max-width: 13.6vw;" src="images/competition.jpg" alt=""> <!-- 262 250 -->
+	  </div>
+	  <div class="colonne_droite"><h3>Compétition</h3></div>
+	</div>
+
+	<p>Proposez un programme permettant de faire, le plus rapidement possible, 5 tours de piste
+	  (Le support avec une piste est disponible en salle de classe) avec le robot.</p>
+
+	<p>Consignes pour la compétition:</p>
+	<ul>
+	  <li>A la mise sous tension, le robot fait une pause de 3 secondes et attendant une consigne sonore.</li>
+	  <li>Au départ, le robot peut être positionné dans, au choix, un des deux sens de la piste, et il ne doit
+	    pas faire de demi-tours pendant le parcours. Le résultat n'est validé que
+	    si le robot est capable de faire la course dans les deux sens de la piste.</li>
+	  <li>Le robot doit s'arrêter de lui-même après moins de 5 tours et un quart de piste.</li>
+	</ul>
+	
+	
+	<!--             Bouttons de navigation                -->
+	<p></p>
+	<div class="tablesansbords">
+	    <table style="width: 100%;">
+	      <tr>
+		<td>
+		  <form action="moway_1.html" method="get">
+		    <input type="submit" value="Retour" />
+		  </form>
+		</td>
+		<td style="text-align: right;">
+		  <form action="moway_3.html" method="get">
+		    <input type="submit" value="Suite" />
+		  </form>
+		</td>
+	      </tr>
+	    </table>
+	</div>      
+	
+	<p><br/><br/><br/></p>
+
+      </div> <!-- justifie -->
+      
+    </div> <!-- contenu -->
+    
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!--<!DOCTYPE html>-->
+
+<html lang="fr">
+
+  <head>
+    <title>Robot Moway</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" title="Design" href="design.css" />
+  </head>
+
+  <body>
+
+    <div class="contenu">
+
+      <!--             Titre                -->
+      <div class="gros_titre">
+	<h1>Robot Moway</h1>
+	<img style="max-width: 26vw;" src="images/moway.png" alt="">
+
+	<!--             Navigation                -->
+	<div class="navigation">
+	  <a style="width: 13vw; height: 4vw;border-right: 0.05vw solid #000000;" href="moway_1.html">
+	    Capteurs et actionneurs
+	  </a>
+	  <a style="width: 13vw; height: 4vw;border-right: 0.05vw solid #000000" href="moway_2.html">
+	    Programmation
+	  </a>
+	  <a style="width: 13vw; height: 4vw;" class="lien_actif" href="moway_3.html">
+	    Caméra
+	  </a>
+	</div>
+      </div>
+      
+      <!--             Questions               -->
+      <div class="justifie">
+
+	<h2>Les capteurs d'images</h2>
+
+	<p>Il existe deux types de capteurs, permettant de convertir un rayonnement lumineux en un signal
+	  électrique, pour acquérir des images ou des vidéos.</p>
+
+	<p>Les capteurs, de type CCD (Charge-Coupled Device), étaient les plus performant notamment en raison de leur
+	  éfficacité quantique (le rendement des photons convertis en électrons est proche de 100%), d'un
+	  faible niveau de bruit, et de moins de problèmes de distorsion dynamique (Rolling shutter). Pour
+	  ces raisons, les CCD sont généralement appréciés dans le domaine médical ou en astronomie.</p>
+
+	<p>Les capteurs, de type CMOS, étaient moins performant que les CCD, mais, depuis quelques années,
+	  leurs performances sont devenues équivalentes à celles des CCD, au point qu'aujourd'hui le choix
+	  du capteur dépend surtout de l'application. En raison de leur faible cout par rapport aux CCD, les capteurs
+	  CMOS sont omniprésent dans l'électronique grand public, comme dans les webcams ou les smartphones.
+	</p>
+	
+	<div class="image_centree"><img style="max-width: 19.5vw;" src="images/capteur_d_images.jpg" alt=""><br/><br/>
+	  Composant électronique permettant de numériser des images.</div>
+
+	<p><b>Visionnez</b> la vidéo ci-dessous:</p>
+
+	<video style="max-width: 33.3vw;" controls>
+	  <source src="videos/cmos_vs_ccd.mp4" type="video/mp4">
+	    La vidéo n'est pas supportée par le navigateur.
+	</video>
+
+	<p><b>Expliquez</b> quelle est, selon vous, la différence de qualité
+	  (couleurs, contraste, luminosité, parasites, ...) entre des images prise par un capteur CMOS ou par un CCD ?</p>
+
+	<textarea id="" onFocus="" onChange="" cols="100" maxlength="600" rows="10"
+		  wrap="hard" placeholder="Ecrivez votre réponse ici."></textarea>
+	
+	<h2>Les appareils photographiques numériques</h2>
+
+	<h3>Fonctionnement</h3>
+
+	<p>Un appareil photographique numérique est un sytème qu'on peut décomposer en différentes parties:</p>
+
+	<ul>
+	  <li>Un capteur d'images.</li>
+	  <li>Un objectif avec une optique pour faire un grossissement sur la scène et la mise au point, et
+	    un diaphragme pour contrôler l'intensité lumineuse reçue par le capteur d'images.</li>
+	  <li>Un système de visée pour cadrer le champ de vision sur la scène. Si le système de visée utilise la même
+	    optique que pour la prise de vue, on dit que l'appareil photographique est de type "relfex".</li>
+	  <li>Un obturateur, qui permet d'interrompre le flux lumineux, pour contrôler le temps d'exposition, à la
+	    lumière, du capteur d'images.</li>
+	  <li>Des composants électronique pour traiter, transmettre ou stocker les images et vidéos.</li>
+	</ul>
+
+	<div class="image_centree"><img style="max-width: 33.1vw;" src="images/appareil_photo.jpg" alt=""><br/><br/>
+	  Appareil photographique numérique de type "reflex".</div>
+
+	<h3>Caméra du robot Moway</h3>
+
+	<p>Le module caméra du robot Moway s'apparente à un appareil photographique numérique. Il n'a pas
+	  de système de visée ni d'obturateur, donc il n'est pas fait pour faire de la photo. Son objectif peut
+	  se visser/dévisser pour faire la mise au point, et dispose d'une seule lentille optique qui ne permet
+	  pas le grossissement. Son électronique lui sert à transmettre le signal vidéo par ondes radio.</p>
+	
+	<div class="image_centree"><img style="max-width: 22.2vw;" src="images/camera.jpg" alt=""><br/><br/>
+	  Module caméra du robot mOway.</div>
+
+	<p>Les spécifications du capteur CMOS, du fabricant Omnivision et de référence OV7949, de la caméra pour
+	  le robot mOway sont:</p>
+
+	<div class="double_5050">
+	  <div class="colonne_gauche">
+	    <ul>
+	      <li><b>Formats d'image:</b></li>
+	      PAL: 628x586<br/>
+	      NTSC: 510x496
+	      <li><b>Consommation d'énergie:</b></li>
+	      168 mW
+	      <li><b>Zone d'image:</b></li>
+	      5.961mm x 4.276mm
+	    </ul>
+	  </div>
+	  <div class="colonne_droite">
+	    <ul>
+	      <li><b>Plage de température:</b></li>
+	      -20°C à +70°C
+	      <li><b>Plage de temps d'exposition:</b></li>
+	      NTSC: 12 &#x00B5;s - 1/60 s<br/>
+	      PAL: 12.5 &#x00B5;s - 1/50 s
+	      <li><b>Taille d'un pixel:</b></li>
+	      9.2 &#x00B5;m x 7.2 &#x00B5;m 	  
+	    </ul>
+	  </div>
+	</div>
+
+	<h3>Choix d'une lentille optique</h3>
+
+	<p>Un objectif, d'appareil photographique numérique, doit avoir au moins une lentille, comme pour le module caméra
+	  du robot Moway, pour que l'image d'un objet, d'une taille et à une distance données, couvre, au mieux, la
+	  surface du capteur d'images.</p>
+
+	<p>Pour choisir la lentille qui convient le mieux, il faut déterminer sa distance focale en [mm].</p>
+
+	<div class="image_centree"><img style="max-width: 53vw;" src="images/focale.jpg" alt=""><br/><br/> 
+	  Représentation de la distance focale d'une lentille.</div>
+
+	<p>Pour calculer la distance focale d'une lentille permettant que l'image d'un objet, de hauteur H et situé à une distance
+	  d de la lentille, couvre toute la hauteur h du capteur, il faut utiliser la formule:</p>
+
+	<div class="image_centree"><img style="max-width: 10vw;" src="images/formule_f.jpg" alt=""><br/><br/>
+	</div>
+
+	<p><b>Calculer</b> la distance focale, en [mm], d'une lentille permettant que l'image d'un objet, de 20 cm de hauteur et situé à une
+	  distance de 3 mètre de la lentille, couvre toute la hauteur du capteur de la caméra du robot Moway:
+	  <input id="" maxlength="10" size="8" onChange="" onFocus="" placeholder="ex: 21.3">.</p>
+
+	<h2>La vidéo</h2>
+
+	<p><b>Visionnez</b>, en utilisant des écouteurs, la vidéo ci-dessous et <b>répondez</b> aux questions qui suivent:</p>
+
+	<video style="max-width: 33.3vw;" controls>
+	  <source src="videos/l_image_video.mp4" type="video/mp4">
+	    La vidéo n'est pas supportée par le navigateur.
+	</video>
+
+	<p><b>Enumérez</b> les formats vidéo ?</p>
+
+	<textarea id="" onFocus="" onChange="" cols="100" maxlength="600" rows="10"
+		  wrap="hard" placeholder="Ecrivez votre réponse ici."></textarea>
+
+	<p><b>Enumérez</b> les systèmes de codage des couleurs en vidéo ?</p>
+
+	<textarea id="" onFocus="" onChange="" cols="100" maxlength="600" rows="10"
+		  wrap="hard" placeholder="Ecrivez votre réponse ici."></textarea>
+
+	<h2>Utilisation de la caméra du robot</h2>
+
+	<h3>Le logiciel Yawcam</h3>
+
+	<p>Yawcam est un logiciel permettant de capter et de diffuser le flux vidéo, provenant d'une caméra, connectée
+	  à un ordinateur. Les modes de diffusion sont:</p>
+
+	<ul>
+	  <li>Fichier : Capture à intervalle fixe d’une image de la webcam et sauvegarde du fichier sur un disque dur local ou
+	    réseau. Principaux paramètres : dossier de destination, nomenclature des fichiers, type de fichier (jpg, png ou
+	    gif), nombre maximum de fichiers à conserver, intervalle de la capture d’image et qualité de l’image.</li>
+	  <li>FTP : Capture à intervalle fixe d’une image de la webcam et sauvegarde du fichier sur un serveur distant.
+	    Principaux paramètres : paramètres de connexion FTP, dossier de destination, nomenclature des fichiers, type
+	    de fichier, nombre maximum de fichiers à conserver, intervalle de la capture d’image et qualité de l’image.</li>
+	  <li>HTTP : Capture à intervalle fixe d’une image de la webcam et affichage de la dernière image sur une page web.
+	    Paramètres : numéro du port et qualité de l’image. Yawcam utilise le port 8888 par défaut pour diffuser les
+	    images sur une page web. Si vous êtes en réseau local par l’entremise d’un routeur, tous les usagers du
+	    réseau peuvent accéder à la page web à l’adresse IP de votre machine suivie de « :8888 » ou pour plus de
+	    commodité suivie de « :8888/update.html » pour un rafraichissement automatique de la page. Par exemple http:
+	    //192.168.1.4:8888/update.html. Pour un accès universel à cette page web, il s’agit de taper l’adresse IP avec
+	    laquelle vous être connecté à internet (fournie par votre FAI) suivi de « :8888. » Par exemple : http:
+	    //24.200.11.76:8888. Si le code HTML ne vous fait pas peur, vous pouvez éditer les pages web localisées dans
+	    le dossier « C:\users\votre_nom\.yawcam\www ». Pour connaître vos adresses locales et internet, allez dans
+	    les menus « Suis-je en ligne? » et « Quelle est mon URL? » dans l’aide.</li>
+	  <li>Streaming : Un flux vidéo est diffusé sur une page web. Principaux paramètres : numéro du port, type de
+	    streaming (flux vidéo), taille de l’image, qualité de l’image, gestion des connexions et personnalisation de
+	    l’apparence de la page web. Pour accéder à la page web en réseau local ou par internet, c’est le même
+	    principe que pour le mode HTTP, mais sur le port 8081 (par défaut).</li>
+	  <li>Détection : Contrairement aux autres modes, l’accès aux paramètres de ce mode se fait par une fenêtre
+	    séparée (menu « Fenêtre - Détection de mouvement ») et non pas par le menu « Paramètres ». Vous aurez
+	    compris que ce qui déclenche la capture d’une image de la webcam dans ce mode est la détection de
+	    mouvement. Je ne détaillerai pas toutes les possibilités de paramétrage car elles sont trop nombreuses. Disons
+	    seulement qu’on y règle le mode et la sensibilité de la détection et les actions à prendre lors d’une capture
+	    d’image et qu’on gère les captures réalisées.</li>	  
+	</ul>
+
+	<div class="image_centree"><img style="max-width: 43.5vw;" src="images/yawcam.jpg" alt=""><br/><br/>
+	  Fenêtres de contrôle et de visualisation des images du logiciel Yawcam</div>
+
+	<h3>Mise en oeuvre de la caméra</h3>
+
+	<ul>
+	  <li><b>Connectez,</b> interrupteur de mise sous tension au dessous du robot en position OFF, la caméra
+	    dans le robot Moway en l'insérant, objectif de la caméra vers l'avant du robot, dans le connecteur
+	    du dessus.</li>
+	  <li><b>Lancez</b> le logiciel MowayWorld, <b>créez</b> le programme ci-dessous, et <b>transférez</b> le
+	    programme dans le robot en suivant les mêmes consignes que dans la partie programmation. Le choix, dans la boite
+	    de dialogue de configuration du module de lecture vidéo, du canal de transmission doit être différent pour
+	    chacun des groupes d'élèves.<br/><br/>
+	    <div class="image_centree"><img style="max-width: 25.3vw;" src="images/prog_camera.jpg" alt=""><br/><br/>
+	    </div>
+	  </li>
+	  <li>
+	    <b>Positionnez</b> l'interrupteur, sur le boitier de reception vidéo, sur votre canal de transmission, et
+	    <b>connectez</b> le boitier vidéo à l'ordinateur avec un cable USB.<br/><br/>
+	    <div class="image_centree"><img style="max-width: 25.3vw;" src="images/boitier_video.jpg" alt=""><br/><br/> 
+	      Boitier de reception vidéo</div>
+	  </li>
+	  <li><b>Positionnez</b> l'interrupteur, sous le robot Moway, de mise sous tension en position ON. La
+	    petite Del bleu de la caméra doit s'allumer.</li>
+	  <li><b>Lancez</b> le logiciel YawCam. Si aucune fenêtre avec l'image de la caméra n'apparait, <b>allez</b> dans
+	    le menu <i>Settings &#8594; Device (none) &#8594; Change to</i> et <b>choisissez</b> <i>Moway Videocap</i>.
+	    Si l'image n'est pas en couleur, <b>allez</b> dans le menu <i>Settings &#8594; Device (Moway Videocap) &#8594;
+	      Device properties ...</i> et <b>choisissez</b> le standard <i>PAL/BDGHI</i>.</li>
+	</ul>
+	
+	
+	<!--             Bouttons de navigation                -->
+	<p></p>
+	<div class="tablesansbords">
+	    <table style="width: 100%;">
+	      <tr>
+		<td>
+		  <form action="moway_2.html" method="get">
+		    <input type="submit" value="Retour" />
+		  </form>
+		</td>
+		<td></td>
+	      </tr>
+	    </table>
+	</div>      
+	
+	<p><br/><br/><br/></p>
+
+      </div> <!-- justifie -->
+      
+    </div> <!-- contenu -->
+    
+  </body>
+</html>
+

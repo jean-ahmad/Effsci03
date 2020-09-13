@@ -1,0 +1,334 @@
+<!--<!DOCTYPE html>-->
+
+<html lang="fr">
+
+  <head>
+    <title>Robot Moway</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" title="Design" href="design.css" />
+  </head>
+
+  <body >
+    
+    <div class="contenu">
+      
+      <!--             Titre                -->
+      <div class="gros_titre">
+	<h1>Robot Moway</h1>
+	<img style="max-width: 26vw;" src="images/moway.png" alt=""> 
+	
+	<!--             Navigation                -->
+	<div class="navigation">
+	  <a style="width: 13vw; height: 4vw;border-right: 0.05vw solid #000000;" class="lien_actif" href="moway_1.html">
+	    Capteurs et actionneurs
+	  </a>
+	  <a style="width: 13vw; height: 4vw;border-right: 0.05vw solid #000000" href="moway_2.html">
+	    Programmation
+	  </a>
+	  <a style="width: 13vw; height: 4vw;" href="moway_3.html">
+	    Caméra
+	  </a>
+	</div>
+      </div>
+      
+      <!--             Questions               -->
+      <div class="justifie">
+      
+      <h2>Présentation du système</h2>
+
+      <p>Moway est un petit robot autonome programmable conçu spécialement pour réaliser
+	des applications pratiques de robotique mobile. Il offre une plateforme idéale pour tous
+	ceux qui veulent découvrir le monde des robots mobiles ou pour ceux qui veulent
+	réaliser des applications plus complexes.</p>
+
+      <p>Le robot Moway est doté d’une série de capteurs qui vont l’aider à se débrouiller
+	dans un environnement réel. Il dispose pour cela d’un groupe de motorisation qui lui
+	permet de se déplacer sur le terrain. Tous ces dispositifs sont raccordés à un
+	microcontrôleur qui est en charge de la commande du robot.</p>
+
+      <p>Ce petit robot dispose de possibilités d’extensions à travers son bus de
+	communication. On pourra y raccorder par exemple un module de communication sans
+	fil, une caméra embarquée, une carte prototype ainsi que tout autre dispositif qui
+	pourrait se révéler nécessaire au développement d’une nouvelle application. Des
+	exemples d’applications sont donnés sur le site de la communauté Moway.</p>
+
+      <p>Moway renferme les éléments suivants:</p>
+      <ul>
+	<li>Processeur,</li>
+	<li>Système de motorisation,</li>
+	<li>Groupe de capteurs et indicateurs,</li>
+	<li>Système d’alimentation.</li>
+      </ul>
+
+      <div class="image_centree"><img style="max-width: 54.2vw;" src="images/representation.jpg" alt=""><br/><br/> 
+	  Représentation des constituants de Moway.</div>
+
+      <h3>Processeur</h3>
+
+      <p>Les Moways sont contrôlés par un microcontrôleur PIC18F86J50 du fabricant
+	Microchip Technology cadencé à 4Mhz. C’est dans ce microcontrôleur que sera chargé
+	le programme élaboré sur le PC. Sur ses ports d’entrées/sorties sont raccordés tous les
+	périphériques contrôlés par le robot. Certains d’entre eux nécessitent une entrée ou
+	sortie numérique, d’autres une analogique et d’autres encore se contrôlent à travers l’un
+	des bus de communication I2C/SPI.</p>
+
+      <h3>Système de motorisation</h3>
+
+      <p>Les Moways disposent de deux groupes servomoteurs pour se déplacer. Le
+	système se décompose en :</p>
+      <ul>
+	<li>Une partie électronique se charge principalement de contrôler la vitesse des
+	  moteurs.</li>
+	<li>Une partie mécanique qui permet à Moway de disposer d’une puissance
+	  suffisante pour se déplacer dans divers environnements.</li>
+      </ul>
+      
+      <div class="image_centree"><img style="max-width: 31vw;" src="images/motorisation.jpg" alt=""><br/><br/>
+	  Système de motorisation : électronique, mécanique.</div>
+
+      <p>Le groupe servomoteur a diverses fonctionnalités :</p>
+      <ul>
+	<li>Contrôle de vitesse : contrôle séparément la vitesse de chaque moteur.</li>
+	<li>Contrôle de temps: Contrôle le temps de chaque commande avec une
+	  précision de 100ms.</li>
+	<li>Contrôle de distance parcourue: Contrôle la distance parcourue lors de
+	  chaque commande avec une précision de 1.7mm.</li>
+	<li>Compteur kilométrique général: Il comptabilise la distance parcourue
+	  depuis le début des commandes envoyées.</li>
+	<li>Contrôle d’angle: Contrôle de l’angle de rotation de Moway.</li>
+      </ul>
+
+      <p>Le microcontrôleur envoie la commande I2C au système de motorisation qui
+	commande les moteurs et le microcontrôleur principal reste ainsi disponible pour
+	pouvoir réaliser d’autres taches.</p>
+
+      <p>Le contrôle de vitesse se réalise par une commande en boucle fermée grâce aux
+	signaux de mesure issus des codeurs (capteurs de mesure de vitesse et de déplacement
+	des moteurs). La rotation de la roue est mesurée par un codeur logé sur l’un des
+	engrenages et par un capteur infrarouge. Le microcontrôleur analyse ce signal et agit sur
+	les moteurs. Moway peut donc contrôler sa vitesse et la distance parcourue.</p>
+
+      <div class="image_centree"><img style="max-width: 48vw;" src="images/controle_moteurs.jpg" alt=""><br/><br/>
+	  Contrôle des moteurs.</div>
+
+      <h3>Groupe capteurs et indicateurs</h3>
+
+      <p>Ce groupe est composé des différents capteurs et indicateurs lumineux connectés
+	au microcontrôleur de Moway avec lesquels le robot interagit avec le monde extérieur:</p>
+
+      <div class="image_centree"><img style="max-width: 57.3vw;" src="images/capteurs_indicateurs.jpg" alt=""><br/><br/>
+	Groupe capteurs et indicateurs.</div>
+
+      <p><br/></p>
+      
+      <div class="image_centree"><img style="max-width: 32.5vw;" src="images/carte_elec_dessus.jpg" alt=""><br/><br/> 
+	Vue de dessus de la carte électronique mOway.</div>
+
+      <p><br/></p>
+      
+      <div class="image_centree"><img style="max-width: 34.2vw;" src="images/carte_elec_dessous.jpg" alt=""><br/><br/> 
+	  Vue de dessous de la carte électronique mOway.</div>
+
+      <h4>Capteur de ligne</h4>
+
+      <p>Les capteurs de ligne son deux capteurs infra rouge montés en partie inférieure
+	avant du robot. Ils utilisent la réflexion de la lumière infrarouge pour détecter le ton du
+	sol au point où se situe le robot.</p>
+
+      <p>Ces deux capteurs sont connectés à deux entrées analogiques du microcontrôleur
+	et il est donc possible, en plus de la détection de fortes différentes de contraste (ligne
+	blanche sur fond noir par exemple), de discerner également différents tons.</p>
+
+      <p>Le capteur CNY70 de Vishay, est constitué par une structure compacte où la
+	source d’émission de lumière et le détecteur sont disposés dans la même direction afin
+	de détecter, au moyen d’un rayon infrarouge, la lumière réfléchie par le sol.</p>
+
+      <p>Les Images suivantes illustrent trois différents cas pouvant se présenter :</p>
+
+      <ul>
+	<li><b>Superficie claire</b> : La superficie blanche réfléchit toute la lumière
+	  infrarouge et sur la sortie en mode commun du transistor une tension faible
+	  est présente.<br/><br/>
+      
+	  <div class="image_centree"><img style="max-width: 26.3vw;" src="images/capteur_ligne_claire.jpg" alt=""><br/><br/> 
+	    Capteur de ligne sur superficie claire.</div></li>
+
+	<li style="margin-top: 2vw;"><b>Superficie de couleur</b> : Superficie de couleur: La superficie de
+	  couleur réfléchit une partie de la lumière émise et une tension de
+	  niveau moyen est appliquée à l’entrée analogique du
+	  microcontrôleur. Il est donc facile, de cette façon, d’identifier les
+	  couleurs.<br/><br/>
+
+	  <div class="image_centree"><img style="max-width: 27.5vw;" src="images/capteur_ligne_couleur.jpg" alt=""><br/><br/>
+	    Capteur de ligne sur superficie claire.</div></li>
+
+	<li style="margin-top: 2vw;"><b>Superficie obscure</b>: La superficie obscure ne réfléchit qu’une faible
+	  partie de la lumière émise ; une tension élevée est présente en sortie
+	  du capteur.<br/><br/>
+	  
+	  <div class="image_centree"><img style="max-width: 27.4vw;" src="images/capteur_ligne_obscure.jpg" alt=""><br/><br/>
+	    Capteur de ligne sur superficie claire.</div></li>
+      </ul>
+
+      <p><br/></p>
+      
+      <div class="image_centree"><img style="max-width: 26.5vw;" src="images/moway_dessous.jpg" alt=""><br/><br/>
+	Localisation des capteurs de ligne.</div>
+
+      <h4>Capteurs détecteurs d'obstacles</h4>
+
+      <p>Comme les capteurs de lignes, les capteurs détecteurs d’obstacles utilisent
+	également la lumière infrarouge pour détecter les objets situées à l’avant de Moway. Le
+	capteur est constitué d’une source de lumière infrarouge (KPA3010-F3C de Kingbright)
+	et de quatre récepteurs situés sur les deux parties extrêmes avant du robot.</p>
+
+      <p>La sortie des récepteurs PT100F0MP de Sharp est connectée aux entrées
+	analogiques du microcontrôleur et détecte, non seulement la présence d’un obstacle
+	(mode numérique) mais et également capable de mesurer la distance à laquelle il se
+	trouve (mode analogique).</p>
+
+      <p>Le fonctionnement du capteur est similaire à celui du capteur de ligne. L’émetteur
+	de lumière génère une impulsion durant 70 microsecondes qui, dans le cas de la
+	présence d’un obstacle, se réfléchit sur ce dernier et est détectée par le récepteur ; le
+	signal est ensuite filtré et amplifié. Une fois traité le signal est appliqué au
+	microcontrôleur qui le traite comme une entrée analogique ou numérique. </p>
+
+      <div class="image_centree"><img style="max-width: 29.5vw;" src="images/detecteur_obstacles.jpg" alt=""><br/><br/>
+	Capteur détecteur d’obstacles.</div>
+
+      <p><br/></p>
+      
+      <div class="image_centree"><img style="max-width: 21.5vw;" src="images/moway_devant.jpg" alt=""><br/><br/> 
+	Localisation des capteurs d’obstacles.</div>
+
+      <h4>Capteur de luminosité</h4>
+
+      <p>Ce capteur permet à Moway de connaitre l’intensité lumineuse qui entre par
+	l’ouverture en forme de demi-lune située en partie avant du robot. Grace à cette
+	position, il peut localiser la source de lumière et agir en conséquence.</p>
+
+      <p>La sortie du capteur APDS-9002 de Avago Technologies est connectée à un port
+	analogique du microcontrôleur de façon à ce qu’une simple lecture du capteur nous
+	permette de savoir le niveau d’intensité lumineuse et s’il a augmenté ou diminué depuis
+	la dernière lecture.</p>
+
+      <p>Ce capteur fonctionne d’une façon similaire aux capteurs basés sur le LDR (Light
+	Dependant Resistors).</p>
+
+      <div class="image_centree"><img style="max-width: 16.5vw;" src="images/moway_dessus_avant.jpg" alt=""><br/><br/> 
+	  Orifice du capteur de luminosité.</div>
+
+      <h4>DEL avant</h4>
+
+      <p>La DEL avant est de couleur blanche ; c’est un modèle DEL LW A6SG de
+	OSRAM et elle est raccordée à une sortie numérique du microcontrôleur.</p>
+
+      <h4>DEL supérieure bicolore</h4>
+
+      <p>Cet indicateur partage avec le capteur de luminosité la même ouverture en partie
+	supérieure du robot. Ils sont raccordés à deux sorties numériques du microcontrôleur. Il
+	convient de préciser, que partageant la même ouverture que le capteur de luminosité.</p>
+
+      <div class="image_centree"><img style="max-width: 20vw;" src="images/moway_dels_avant.jpg" alt=""><br/><br/>
+	  Robot avec DEL avant blanche et supérieure rouge allumées.</div>
+
+      <h4>DEL de frein</h4>
+
+      <p>La DEL de frein est un indicateur qui est raccordé à une sortie numérique du
+	microcontrôleur ; elle est située en partie arrière du robot, derrière le filtre rouge.</p>
+      
+      <div class="image_centree"><img style="max-width: 19.3vw;" src="images/moway_dels_arriere.jpg" alt=""><br/><br/> 
+	  Localisation de la DEL de frein rouge. La DEL verte allumée est le voyant de mise
+	  sous tension, elle est non contrôlable.</div>
+
+      <h4>Capteur de température</h4>
+
+      <p>mOway est doté d’un capteur d’une thermistance CTN de Murata, qui est un
+	semi-conducteur dont la résistance diminue à mesure que la température augmente.</p>
+
+      <p>La thermistance est raccordée à une entrée analogique du microcontrôleur et une
+	simple lecture du CAN nous permettra de connaitre la température actuelle et si elle a
+	diminué ou augmenté depuis la dernière lecture.</p>
+
+      <h4>Haut parleur</h4>
+
+      <p>Le haut parleur est un modèle CMT-1102 de CUI INC raccordé au
+	microcontrôleur du robot ; il est capable de reproduire des sons de fréquences comprises
+	entre 250 Hz et 5,6kHz, et de durées multiples de 100 ms.</p>
+
+      <p>C’est un modèle de type piézoélectrique. Le fonctionnement repose sur les
+	propriétés de déformation (contraction ou dilatation) des matériaux piézoélectriques
+	lorsqu’ils sont soumis à un champ électrique.</p>
+
+      <h4>Microphone</h4>
+
+      <p>Le microphone est un modèle CMC-5042PF-AC de CUI INC ; il permet au robot
+	de détecter des sons compris entre 100 Hz et 20 KHZ.</p>
+
+      <p>La sortie du microphone est raccordée à une entrée analogique du
+	microcontrôleur ; il peut donc détecter s’il y a un son ou pas (mode numérique), mais
+	également par une simple lecture du CAN de détecter le niveau d’intensité sonore
+	(mode analogique).</p>
+
+      <h4>Accéléromètre</h4>
+
+      <p>Un accéléromètre est un dispositif qui mesure l’accélération et les forces induites
+	par la gravité : déplacement et rotation. En mesurant l’accélération sur les 3 axes X, Y, Z,
+	l’accéléromètre MMA7455L de Freescale Semiconductor permet de savoir sir le robot
+	est en position correcte ou s’il s’est retournée ou couché sur un coté. Il permet
+	également de savoir si le robot est entré en collision ou s’il est tombé.</p>
+
+      <h2>Capteurs et actionneurs</h2>
+
+      <h3>Les capteurs</h3>
+      
+      <p>Un capteur est un élément qui va prélever une information et transformer celle-ci. Le capteur
+	va donc transformer une grandeur physique en une autre grandeur (très souvent électrique) servant
+	à des fins de mesure ou de commande.</p>
+
+      <div class="image_centree"><img style="max-width: 38vw;" src="images/principe_capteur.jpg" alt=""><br/><br/>
+	  Principe d'un capteur.</div>
+
+      <p><b>Listez</b>, en séparant vos réponses par une virgule, l'ensemble des capteurs présents sur le robot Moway:</p>
+
+      <textarea id="" onChange="" onFocus=""
+		    cols="100" maxlength="600" rows="10" wrap="hard" placeholder="Ecrivez vos réponses ici."></textarea>
+      
+      <h3>Les actionneurs</h3>
+
+      <p>L'actionneur est l'organe de la chaîne d'énergie qui va réaliser le conversion de
+	l'énergie pour réaliser une action. Par exemple le moteur transforme l'énergie électrique
+	en énergie mécanique pour assurer un mouvement, l'ampoule transforme l'énergie électrique en lumière
+	pour éclairer.</p>
+
+      <p><b>Listez</b>, en séparant vos réponses par une virgule, l'ensemble des actionneurs présents sur le robot Moway:</p>
+      
+      <textarea id="" onChange="" onFocus=""
+		cols="100" maxlength="600" rows="10" wrap="hard" placeholder="Ecrivez vos réponses ici."></textarea>
+      
+
+      <!--             Bouttons de navigation                -->
+      <p></p>
+      <div class="tablesansbords">
+	<table style="width: 100%;">
+	  <tr>
+	    <td>
+	      
+	    </td>
+	    <td style="text-align: right;">
+	      <form action="moway_2.html" method="get">
+		<input type="submit" value="Suite" />
+	      </form>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+
+      <p><br/><br/><br/></p>
+
+      </div> <!-- justifie -->
+      
+    </div> <!-- contenu -->
+    
+  </body>
+</html>
